@@ -35,7 +35,7 @@ task run_selecting {
     }
     
     command <<<
-	bcftools view -i 'ID=@{id}' -Oz -o ~{out_name}.selected.vcf.gz ~{vcf}
+	bcftools view -i 'ID=@~{id}' -Oz -o ~{out_name}.selected.vcf.gz ~{vcf}
 	tabix -p vcf ~{out_name}.selected.vcf.gz
     >>>
 
